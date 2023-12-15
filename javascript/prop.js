@@ -1,4 +1,4 @@
-const isFunction = require("./isFunction");
+const {isFunction} = require("./isFunction");
 
 /**
  * obtains and returns the value at the provided key.

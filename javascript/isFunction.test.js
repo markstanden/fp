@@ -1,4 +1,4 @@
-const isFunction = require("./isFunction");
+const {isFunction} = require("./isFunction");
 
 describe("isFunction test", () => {
     it("returns true for a standard function", ()=>{

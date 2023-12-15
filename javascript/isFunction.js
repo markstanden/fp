@@ -9,4 +9,4 @@ function isFunction(f) {
     }
 }
 
-module.exports = isFunction;
+module.exports = {isFunction};
