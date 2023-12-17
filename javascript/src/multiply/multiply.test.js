@@ -1,4 +1,4 @@
-const {multiply} = require('./functional-base.js')
+const {multiply} = require('./multiply')
 
 
 describe('multiply test', () => {

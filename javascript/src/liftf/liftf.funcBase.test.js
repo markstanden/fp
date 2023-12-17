@@ -1,5 +1,8 @@
 const {liftf} = require('./liftf')
-const {add, divide, multiply, subtract} = require('../base/functional-base.js')
+const {add} = require('../add/add');
+const {subtract} = require('../subtract/subtract');
+const {multiply} = require('../multiply/multiply');
+const {divide} = require('../divide/divide');
 
 describe('liftf test', () => {
 

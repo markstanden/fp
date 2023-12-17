@@ -1,4 +1,4 @@
-const {divide} = require('./functional-base.js')
+const {divide} = require('./divide')
 
 describe('divide test', () => {
     it('both invocations zero', () => {

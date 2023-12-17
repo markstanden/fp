@@ -1,5 +1,4 @@
-const {subtract} = require('./functional-base.js')
-
+const {subtract} = require('./subtract');
 
 describe('subtract test', () => {
     it('both parameters zero', () => {

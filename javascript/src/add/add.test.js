@@ -1,4 +1,4 @@
-const {add} = require('./functional-base.js')
+const {add} = require('./add')
 
 describe('add test', () => {
     it('both parameters zero', () => {
