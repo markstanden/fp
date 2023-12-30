@@ -7,7 +7,7 @@ describe("prop test", () => {
         third: "Third Value",
     }
 
-    it("returns first value correctly", ()=>{
+    test("returns first value correctly", ()=>{
         const getFirst = prop('first');
         const sut = getFirst(testObject);
         const expected = "First Value"
@@ -15,7 +15,7 @@ describe("prop test", () => {
         expect(sut).toEqual(expected);
     })
 
-    it("returns second value correctly", ()=>{
+    test("returns second value correctly", ()=>{
         const getSecond = prop('second');
         const sut = getSecond(testObject);
         const expected = "Second Value"
@@ -23,7 +23,7 @@ describe("prop test", () => {
         expect(sut).toEqual(expected);
     })
 
-    it("returns returns undefined if key not present", ()=>{
+    test("returns returns undefined if key not present", ()=>{
         const getUndefinedProp = prop('xxxxxx');
         const sut = getUndefinedProp(testObject);
         const expected = undefined
@@ -31,7 +31,7 @@ describe("prop test", () => {
         expect(sut).toEqual(expected);
     })
 
-    it("does not throw if key not present", ()=>{
+    test("does not throw if key not present", ()=>{
         const getUndefinedProp = prop('xxxxxx');
         const sut = () => getUndefinedProp(testObject);
 

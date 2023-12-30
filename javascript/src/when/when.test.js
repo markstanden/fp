@@ -1,6 +1,6 @@
 const {when} = require('./when');
 describe('when tests', () => {
-    it('should run the function if the predicate is true', () => {
+    test('should run the function if the predicate is true', () => {
         const fn = () => 1;
         const predicate = () => true;
         const sut = when(fn)(predicate)("ANYTHING");
@@ -9,7 +9,7 @@ describe('when tests', () => {
         expect(sut).toEqual(expected);
     })
 
-    it('should run not the function if the predicate is false', () => {
+    test('should run not the function if the predicate is false', () => {
         const fn = () => 1;
         const predicate = () => false;
         const sut = when(fn)(predicate)("ANYTHING");
@@ -18,7 +18,7 @@ describe('when tests', () => {
         expect(sut).toEqual(expected);
     })
 
-    it('should evaluate the predicate and run the function if the predicate is true', () => {
+    test('should evaluate the predicate and run the function if the predicate is true', () => {
         const fn = () => 1;
         const predicate = (a) => a < 0;
         const sut = when(fn)(predicate)(-1);
@@ -27,7 +27,7 @@ describe('when tests', () => {
         expect(sut).toEqual(expected);
     })
 
-    it('should evaluate the predicate and not run the function if the predicate is false', () => {
+    test('should evaluate the predicate and not run the function if the predicate is false', () => {
         const fn = () => 1;
         const predicate = (a) => a < 0;
         const sut = when(fn)(predicate)(1);
@@ -36,7 +36,7 @@ describe('when tests', () => {
         expect(sut).toEqual(expected);
     })
 
-    it('should pass arguments into the function', () => {
+    test('should pass arguments into the function', () => {
         const fn = (a, b) => a + b;
         const predicate = () => true;
         const sut = when(fn)(predicate)(1, 2);
@@ -45,7 +45,7 @@ describe('when tests', () => {
         expect(sut).toEqual(expected);
     })
 
-    it('should not mutate arguments', () => {
+    test('should not mutate arguments', () => {
         const fn = (a, b) => {
             a++;
             b++;
@@ -67,7 +67,7 @@ describe('when tests', () => {
         expect(b).toEqual(expectedB);
     })
 
-    it('predicate actions should not affect function arguments', () => {
+    test('predicate actions should not affect function arguments', () => {
         const fn = (a, b) => {
             a++;
             b++;

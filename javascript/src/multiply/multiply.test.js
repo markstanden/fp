@@ -2,30 +2,30 @@ const {multiply} = require('./multiply')
 
 
 describe('multiply test', () => {
-    it('both parameters zero', () => {
+    test('both parameters zero', () => {
         expect(multiply(0, 0)).toBe(0);
     });
-    it('first parameter zero', () => {
+    test('first parameter zero', () => {
         expect(multiply(0, 1)).toBe(0);
     });
-    it('second parameter zero', () => {
+    test('second parameter zero', () => {
         expect(multiply(1, 0)).toBe(0);
     });
 
-    it('first value negative', () => {
+    test('first value negative', () => {
         expect(multiply(-3, 4)).toBe(-12);
     });
-    it('second value negative', () => {
+    test('second value negative', () => {
         expect(multiply(3, -4)).toBe(-12);
     });
-    it('both values negative', () => {
+    test('both values negative', () => {
         expect(multiply(-3, -4)).toBe(12);
     });
 
-    it('two positive values, first larger', () => {
+    test('two positive values, first larger', () => {
         expect(multiply(4, 3)).toBe(12);
     });
-    it('two positive values, second larger', () => {
+    test('two positive values, second larger', () => {
         expect(multiply(3, 4)).toBe(12);
     });
 });
