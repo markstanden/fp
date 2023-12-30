@@ -21,6 +21,16 @@ class Box {
     }
 
     /**
+     * returns a box of unboxed nested content after performing
+     * the passed function on the content
+     * @param {(function(*): Box<Box<any>>)} f
+     * @return {*}
+     */
+    chain(f){
+        return this.fold(f);
+    }
+
+    /**
      * returns unboxed contents after
      * applying the passed function
      * @return {*}
